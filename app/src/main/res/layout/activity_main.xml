@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_centerVertical="true">
+
+    <ImageView
+        android:id="@+id/avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.02"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/avatar"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Имя"
+        android:id="@+id/name_vvod"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        app:endIconMode="clear_text"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/name"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Телефон"
+        android:id="@+id/telefone"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox"
+        app:boxBackgroundColor="@color/fiolet"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_vvod">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Пол"
+        style="@style/MyText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefone"
+        app:layout_constraintHorizontal_bias="0.03"
+        />
+    <RadioGroup
+        android:id="@+id/radio_group"
+        style="@style/MyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_one"
+        app:layout_constraintHorizontal_bias="0.08">
+
+        <RadioButton
+            android:id="@+id/men"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="М"/>
+        <RadioButton
+            android:id="@+id/women"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Ж"/>
+
+    </RadioGroup>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintHorizontal_bias="0.08"
+        android:id="@+id/switch1"
+        app:thumbTint="@color/fiolet"
+        app:trackTint="#FCE3FD"
+        android:text="Получать уведомления"
+        style="@style/MyText"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/chek1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        android:layout_marginLeft="30dp"
+        android:text="Об авторизации на устройстве"
+        android:buttonTint="#03dac5"/>
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/chek2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chek1"
+        android:layout_marginLeft="30dp"
+        android:text="О новинках и предложениях"
+        android:buttonTint="#03dac5"/>
+    <LinearLayout
+        android:id="@+id/balls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chek2"
+        app:layout_constraintHorizontal_bias="0.03"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/text_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Баллы"
+            style="@style/MyText"/>
+        <TextView
+            android:id="@+id/count1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="180dp"
+            style="@style/Balls"/>
+        <TextView
+            android:id="@+id/slesh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            style="@style/Balls"/>
+        <TextView
+            android:id="@+id/count2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            style="@style/Balls"/>
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balls"
+        android:layout_marginTop="5dp"
+        android:progress="100"
+        app:indicatorColor="@color/fiolet"
+        app:trackColor="#FCE3FD"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress1"
+        android:layout_marginTop="15dp"
+        android:text="Сохранить"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
