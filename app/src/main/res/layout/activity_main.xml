@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Имя"
-        android:id="@+id/name_vvod"
+        android:id="@+id/namevvod"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
@@ -51,10 +51,11 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_vvod">
+        app:layout_constraintTop_toBottomOf="@+id/namevvod">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/telefonvvod"
 
             android:inputType="number"
             />
