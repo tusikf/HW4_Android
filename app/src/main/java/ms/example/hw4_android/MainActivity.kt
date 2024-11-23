@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         var countradio = 0
         val a = Random.nextInt(101)
         binding.progress1.progress = a
-        binding.count1.text = countradio.toString()
+        binding.count1.text = a.toString()
         binding.switch1.isChecked = false
         binding.chek1.isEnabled = false
         binding.chek2.isEnabled = false
